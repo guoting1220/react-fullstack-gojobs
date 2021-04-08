@@ -1,0 +1,11 @@
+.CompanyCard-body {
+    width: 60%;
+    margin: 2rem auto;
+    padding: 0.8rem;
+    text-align: left;
+    border: 2px solid #C5C6C6;
+    border-radius: 0.5rem;    
+    box-shadow: 2px 2px  #C5C6C6;  
+    background-color: white;  
+    color: black;
+}

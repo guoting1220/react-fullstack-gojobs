@@ -1,0 +1,25 @@
+.Homepage {
+    margin: 30vh auto;
+}
+
+.Homepage p {
+    font-size: 1.3rem;
+}
+
+.Homepage button {
+    font-size: 1.2rem;
+    width: 6rem;
+    height: 3rem;
+    margin: 0.5rem;
+    color: white;
+    background-color: #5394C7;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.Homepage button:hover {
+    background-color: #3976A6;
+}
+

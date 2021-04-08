@@ -1,0 +1,40 @@
+nav {
+  background-color: rgb(116, 105, 105);
+  padding: 1rem;
+}
+
+nav a {
+  color: #f0f2f5;
+  margin: 1.5rem;
+  text-decoration: none;
+}
+
+nav a.active {
+  color: #f0f2f5;
+  font-weight: bold;
+  /* border-bottom: 5px solid; */
+  /* box-sizing: border-box; */
+}
+
+nav a:hover {
+  text-decoration: none;
+  color: #f0f2f5;
+}
+
+.NavBar {
+    
+}
+
+/* .NavBar-brand {
+    margin-left: 1rem;
+} */
+
+.NavBar-navItems {
+    justify-content: right;
+    display: inline;
+    margin-right: 1rem;
+}
+
+
+
+
