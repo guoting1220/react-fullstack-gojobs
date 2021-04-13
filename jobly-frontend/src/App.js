@@ -5,17 +5,19 @@ import Routes from './routes/Routes';
 import NavBar from './navbar/NavBar';
 import UserContext from './auth/UserContext';
 import JoblyApi from '././api/api';
+import LoadingSpinner from "./common/LoadingSpinner";
 const jwt = require("jsonwebtoken");
 
 
 function App() {
+  const [infoLoaded, setInfoLoaded] = useState(false);
   const [token, setToken] = useState(window.localStorage.getItem("jobly-token") || null);
   const [currentUser, setCurrentUser] = useState(null);
   const [applications, setApplications] = useState([]);
 
   console.debug(
     "App",
-    // "infoLoaded=", infoLoaded,
+    "infoLoaded=", infoLoaded,
     "currentUser=", currentUser,
     "token=", token,
   );
@@ -92,13 +94,17 @@ function App() {
     }
   })
 
-
+  // Load user info from API. Until a user is logged in and they have a token,
+  // this should not run. It only needs to re-run when a user logs out, so
+  // the value of the token is a dependency for this effect.
+  
   useEffect(() => {
     /* get current user from the token */
     const getCurrentUser = async () => {
       if (token) {
         try {
           const { username } = jwt.decode(token);
+           // put the token on the Api class so it can use it to call the API.
           JoblyApi.token = token;
           const user = await JoblyApi.getCurrentUser(username);
           setCurrentUser(user);
@@ -109,10 +115,18 @@ function App() {
           setCurrentUser(null);
         }
       }
+      setInfoLoaded(true);
     }
 
+    // set infoLoaded to false while async getCurrentUser runs; once the
+    // data is fetched (or even if an error happens!), this will be set back
+    // to false to control the spinner.
+    setInfoLoaded(false);
     getCurrentUser();
   }, [token]);
+
+
+  if (!infoLoaded) return <LoadingSpinner />;
 
   return (
     <BrowserRouter>

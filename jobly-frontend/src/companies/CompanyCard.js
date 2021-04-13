@@ -9,7 +9,7 @@ const CompanyCard = ({ handle, name, description, logoUrl }) => {
 			<div className="CompanyCard-body">
 				<h3>{name}</h3>
 				<p>{description}</p>
-				{/* <img src={logoUrl} alt={name}></img> */}
+				<img src={logoUrl} alt=""></img>
 			</div>
 		</Link>		
 	)
