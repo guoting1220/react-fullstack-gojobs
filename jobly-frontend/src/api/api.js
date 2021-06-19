@@ -34,7 +34,7 @@ class JoblyApi {
 
   // Individual API routes
 
-  /** get tokem for signed up user */
+  /** get token for signed up user */
 
   static async signup(userData) {
     let res = await this.request("auth/register", userData, "post");

@@ -1,5 +1,5 @@
 nav {
-  background-color: rgb(116, 105, 105);
+  background-color: #245077;
   padding: 1rem;
 }
 
@@ -21,9 +21,6 @@ nav a:hover {
   color: #f0f2f5;
 }
 
-.NavBar {
-    
-}
 
 /* .NavBar-brand {
     margin-left: 1rem;
