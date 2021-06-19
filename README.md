@@ -15,7 +15,7 @@ Logged in users can:
 - modify the user profile
 
 ### Deployed App Link
-https://baysharing.surge.sh/
+https://all-in-one-jobly.surge.sh/
 
 ### Tech Stack 
 
