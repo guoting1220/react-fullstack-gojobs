@@ -1,16 +1,67 @@
-1. cd to "jobly-backend", install the dependencies. You can run:
-   ### `npm install`
+# Jobly
+Jobly is a mock job board web application
 
-   to start the server, you can run:
-   ### `npm start`
+### User Flow
+Guest users can:
+- register or login to get access to more features
+
+Logged in users can: 
+- view the information of all the companies
+- view all the job postings
+- view the job postings for specific company
+- search jobs by key words
+- view all the applied jobs
+- un-apply jobs
+- modify the user profile
+
+### Deployed App Link
+https://baysharing.surge.sh/
+
+### Tech Stack 
+
+##### frontend: 
+HTML, CSS, Javascript, React.js
+
+##### backend: 
+Express, Node.js
+
+##### database: 
+SQL, PostgreSQL
+
+### Installation and Setup Instructions
+
+Clone down this repository. You will need `node` and `npm` installed globally on your machine.
+
+##### backend:
+cd to "jobly-backend", install the dependencies:
+  `npm install`
+
+  Create the database and tables,  and populate the tables with sample data:
+
+  (for windows user)
+   `psql -f jobly.sql`
+
+  (for mac user)
+   `psql < jobly.sql` 
+
+   To start the server:
+   `npm start`
+
+   To run test suite:
+   `npm test`
 
 
-2. cd to "jobly-frontend", install the dependencies. You can run:
-   ### `npm install`
+##### frontend:
+cd to "jobly-frontend", and install the dependencies:
+ `npm install`
 
-  ro run the app in the development mode. You can run: 
-   ### `npm start`
+  To run the app in the development mode:
+  `npm start`
 
-3. Open [http://localhost:3000] to view it in the browser.
+   To run test suite:
+  `npm test`
+	
+##### To visit app on localhost:  
 
-   
+Open `http://localhost:3000` to view it in the browser.
+  
