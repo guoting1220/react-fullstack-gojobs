@@ -112,7 +112,7 @@ router.patch("/:id", ensureAdmin, async function (req, res, next) {
   }
 });
 
-/** DELETE /[handle]  =>  { deleted: id }
+/** DELETE /[jobId]  =>  { deleted: id }
  *
  * Authorization required: admin
  */
