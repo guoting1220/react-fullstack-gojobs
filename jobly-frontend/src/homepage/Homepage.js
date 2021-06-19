@@ -10,7 +10,7 @@ const Homepage = () => {
   return (
     <div className="Homepage">
       <div className="Homepage-content">
-        <h1>Jobly</h1>
+        <h1>GoJobs</h1>
         <p> All the jobs in one, convenience place.</p>
         {currentUser ?
           <p>Welcome back, {currentUser.username}!</p>

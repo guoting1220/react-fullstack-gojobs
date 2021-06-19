@@ -10,7 +10,7 @@ const NavBar = ({logout}) => {
 
 	return (
 		<nav className="NavBar">
-			<NavLink exact to="/" className="NavBar-brand ">Jobly</NavLink>	
+      <NavLink exact to="/" className="NavBar-brand ">GoJobs</NavLink>
       {currentUser ?
         (<>
           <NavLink to="/companies">Companies</NavLink>	
