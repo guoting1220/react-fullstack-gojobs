@@ -1,5 +1,5 @@
-# Jobly
-Jobly is a mock job board web application
+# GoJobs
+GoJobs is a mock job board web application
 
 ### User Flow
 Guest users can:
