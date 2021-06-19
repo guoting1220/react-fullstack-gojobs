@@ -15,7 +15,7 @@ Logged in users can:
 - modify the user profile
 
 ### Deployed App Link
-https://all-in-one-jobly.surge.sh/
+https://gojobs.surge.sh/
 
 ### Tech Stack 
 
