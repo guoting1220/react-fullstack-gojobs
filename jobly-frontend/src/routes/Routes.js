@@ -30,17 +30,17 @@ const Routes = ({ signup, login }) => {
           <SignupForm signup={signup} />
         </Route>
 
-        <PrivateRoute exact path="/companies">
+        <Route exact path="/companies">
           <CompanyList />
-        </PrivateRoute>
+        </Route>
 
-        <PrivateRoute exact path="/companies/:handle">
+        <Route exact path="/companies/:handle">
           <CompanyDetail />
-        </PrivateRoute>
+        </Route>
 
-        <PrivateRoute exact path="/jobs">
+        <Route exact path="/jobs">
           <JobList />
-        </PrivateRoute>
+        </Route>
 
         <PrivateRoute exact path="/appliedjobs">
           <AppliedJobs />

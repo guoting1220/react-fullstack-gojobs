@@ -1,10 +1,13 @@
 import React, { useState, useContext } from 'react';
+import { Redirect, useHistory } from 'react-router-dom';
 import './JobCard.css';
 import UserContext from '../auth/UserContext';
 
 
 const JobCard = ({ id, title, salary, equity, companyName }) => {
-  const { applyToJob, unApplyToJob, applications, setApplications } = useContext(UserContext);
+  const { currentUser, applyToJob, unApplyToJob, applications, setApplications } = useContext(UserContext);
+
+  const history = useHistory();
 
   const hasAppliedToJob = () => {
     return applications.includes(id);
@@ -14,6 +17,11 @@ const JobCard = ({ id, title, salary, equity, companyName }) => {
 
   const toggleApply = async () => {
     // debugger;
+    if (!currentUser) {
+      history.push("/login");
+      return;
+    }
+
     if (!isApplied) {
       await applyToJob(id);
       setApplications(applications => [...applications, id]);

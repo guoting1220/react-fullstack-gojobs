@@ -20,6 +20,8 @@ const NavBar = ({logout}) => {
           <NavLink to="/" onClick={logout}>Log Out {currentUser.username}</NavLink>
         </>)
       : (<>
+          <NavLink to="/companies">Companies</NavLink>
+          <NavLink to="/jobs">Jobs</NavLink>
           <NavLink to="/login">Login</NavLink>
           <NavLink to="/signup">Sign Up</NavLink>
         </>)
