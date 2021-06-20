@@ -1,5 +1,5 @@
 import React, { useState, useContext } from 'react';
-import { Redirect, useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import './JobCard.css';
 import UserContext from '../auth/UserContext';
 
@@ -32,8 +32,6 @@ const JobCard = ({ id, title, salary, equity, companyName }) => {
     }
     setIsApplied(!isApplied);
   }
-
-  // useEffect()
 
   return (
     <div className="JobCard">
