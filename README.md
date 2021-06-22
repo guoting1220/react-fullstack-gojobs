@@ -10,8 +10,8 @@ Logged in users can:
 - view all the job postings
 - view the job postings for specific company
 - search jobs by key words
+- apply and un-apply jobs
 - view all the applied jobs
-- un-apply jobs
 - modify the user profile
 
 ### Deployed App Link
