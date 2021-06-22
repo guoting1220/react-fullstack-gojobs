@@ -17,7 +17,7 @@ const NavBar = ({logout}) => {
           <NavLink to="/jobs">Jobs</NavLink>	
           <NavLink to="/appliedjobs">My Applied Jobs</NavLink>
           <NavLink to="/profile">Profile</NavLink>	
-          <NavLink to="/" onClick={logout}>Log Out {currentUser.username}</NavLink>
+          <NavLink to="/logout" onClick={logout}>Log Out {currentUser.username}</NavLink>
         </>)
       : (<>
           <NavLink to="/companies">Companies</NavLink>
